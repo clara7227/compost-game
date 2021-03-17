@@ -1,0 +1,200 @@
+/*COLORES*/
+$color-negro: rgb(26, 26, 26);
+$color-gris: rgb(55, 55, 55);
+$color-gris-medio: rgb(103, 103, 103);
+$color-gris-medio-a: rgba(103, 103, 103, 0.5);
+$color-verde-oscuro: rgb(32, 79, 43);
+$color-rojo-oscuro: rgb(126, 40, 40);
+$color-verde: rgb(0, 137, 32);
+/*body {
+    border: 1px solid $color-negro;
+    width: 100%;
+}
+*/
+.juego {
+  margin: 0 1.6em 0 1.6em;
+}
+.cabecera-juego {
+  display: block;
+  width: 100%;
+  justify-content: center;
+  padding: 1.2em 0 0 0;
+  .titulo-juego {
+    display: block;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .nivel-juego {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0.1em 0 0 0;
+    font-size: 0.9em;
+  }
+}
+.instrucciones {
+  margin: 1.6em 0 1em 0;
+  font-weight: 400;
+  .titulo-instrucciones {
+    font-weight: 600;
+    color: $color-verde-oscuro;
+    font-size: 1em;
+  }
+  .texto-instrucciones {
+    font-size: 0.8em;
+    color: $color-gris;
+  }
+}
+/*VALIDAR*/
+.area-btn-compostar {
+  display: flex;
+  justify-content: right;
+  margin-top: 1em;
+}
+#btn-compostar {
+  margin: 1em 0 0 0;
+  display: flex;
+  justify-content: right;
+  border: $color-gris-medio 1px solid;
+  padding: 0.5em 1em 0.7em 1em;
+  background-color: white;
+  transition: 300ms ease-in;
+  &:hover {
+    background-color: $color-verde;
+    color: white;
+  }
+}
+/*VENTANA MODAL*/
+.contenedor-ventana-modal {
+  display: none;
+  position: absolute;
+  background-color: $color-gris-medio-a;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 2em;
+  top: 0;
+  .ventana-modal {
+    margin: 22px 0 0 0;
+    padding: 0 1.3em 1.5em 1.3em;
+    background-color: white;
+    border: $color-gris-medio 1px solid;
+    width: 95%;
+    z-index: 1;
+  }
+  &.modal-visible {
+    display: flex;
+  }
+  /*PUNTUACION*/
+  .puntuacion {
+    display: block;
+    text-align: center;
+    .numero-puntuacion {
+      font-size: 4em;
+      font-weight: 600;
+      margin: 0.05em 0 -0.25em 0;
+    }
+    .puntuacion-acierto {
+      font-size: 1em;
+    }
+  }
+  /*FEEDBACK*/
+  .feedback {
+    margin-top: 2em;
+    h2 {
+      font-size: 1em;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    .titulo-aciertos {
+      color: $color-verde-oscuro;
+    }
+    .titulo-fallos {
+      color: $color-rojo-oscuro;
+      margin-top: 2em;
+    }
+    .ficha-resultado {
+      display: grid;
+      grid-template-columns: 90px 2fr;
+      max-width: 500px;
+      img {
+        height: 70px;
+        width: 70px;
+        border-radius: 80px;
+        border: solid 1px $color-negro;
+      }
+      h3 {
+        font-size: 0.9em;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+      p {
+        font-size: 0.8em;
+        color: $color-gris;
+      }
+    }
+  }
+  /*BTN SIGUIENTE*/
+  .btn-siguiente {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      margin: 2em 0 0 0;
+      display: flex;
+      justify-content: right;
+      border: $color-gris-medio 1px solid;
+      padding: 0.3em 1em 0.5em 1em;
+      background-color: white;
+      font-size: 0.8em;
+      &:hover {
+        background-color: $color-verde;
+        color: white;
+      }
+    }
+    .salir {
+      display: flex;
+      align-self: right;
+      &:hover {
+        background-color: $color-negro;
+        color: white;
+      }
+    }
+  }
+}
+.texto-drop {
+  font-size: 0.7em;
+  text-align: center;
+  padding-top: 0.4em;
+  line-height: 1.2em;
+}
+/*DESKTOP*/
+@media (min-width: 1000px) {
+  .juego {
+    padding: 0 17em 0 17em;
+  }
+  .compostera {
+    height: 250px;
+  }
+  .instrucciones {
+    margin: 1em 0 1em 1em;
+    font-weight: 400;
+    position: absolute;
+    width: 200px;
+  }
+  .texto-drop {
+    margin: 0.3em 0 0 0;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    width: 80px;
+  }
+  .area-btn-compostar {
+    padding: 1em;
+  }
+  .contenedor-ventana-modal {
+    .ventana-modal {
+      width: 50%;
+      padding: 0 10% 2em 10%;
+    }
+  }
+}

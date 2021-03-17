@@ -1,0 +1,96 @@
+/*COLORES*/
+$color-negro: rgb(26, 26, 26);
+$color-gris: rgb(55, 55, 55);
+
+/*DRAG AND DROP*/
+#outer-dropzone {
+    /*height: 140px;*/
+   
+  }
+  .compostera {
+    height: 140px;
+  }
+  .dropzone {
+    background-color: #bfe4ff;
+    margin: 20px auto 35px;
+    width: 140px;
+    transition: background-color 0.3s;
+    /*background-image: url(portada.jpg);*/
+    img {
+      object-fit: cover;
+      border: 1px solid $color-negro;
+      border-radius: 2px;
+    }
+  }
+  
+  .drop-active {
+    border-color: #aaa;
+  }
+  
+  .drop-target {
+    background-color: #29e;
+   
+  }
+  
+  .drag-drop {
+    display: inline-block;
+    align-items: top;
+    min-width: 40px;
+    margin:0 0.2rem 1em 0;
+    color: $color-negro;
+
+   
+    height: 60px;
+    width: 60px;
+    border-radius: 80px;
+    touch-action: none;
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    transition: background-color 0.3s;
+    vertical-align: middle
+  }
+  /*.juego-contenedor {
+    display: flex;
+    align-items: center;
+  }*/
+
+  .drag-drop.can-drop {
+    img{
+    color: #000;
+    transform: scale(0.7);
+    transition: 100ms ease-in;
+  }
+  p {
+    color:transparent;
+  }
+  }
+  .drag-img{
+    object-fit: cover;
+    height: 60px;
+    width: 60px;
+    border-radius: 80px;
+    border: solid 1px $color-negro;
+
+  }
+  /*DESKTOP*/
+@media (min-width: 1000px) {
+  .drag-img {
+    height: 85px;
+    width: 85px;
+    margin-right: 8px;
+  }
+  .drag-drop {
+    margin-left: 2em;
+  }
+  #outer-dropzone {
+
+      /*height: 140px;*/
+      display: flex;
+      justify-content: center;
+
+  }
+  .dropzone {
+    width:220px;
+  }
+}
+  

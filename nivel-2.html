@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/main.css.map" />
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="./app/nivel-2.js"></script>
+
+    <title>Nivel 2 - Compost Master</title>
+</head>
+
+<body>
+    <header class="barra-navegacion">
+        <span class="btn-menu fa fa-bars"></span>
+    </header>
+    <ul class="menu-desplegable">
+        <li> <a href="index.html">Inicio</a></li>
+        <li> <a href="#">Importancia de compostar</a></li>
+        <li class="menu-juego"> <a href="nivel-1.html"> Jugar </a>
+            <ul class="menu-secundario">
+                <li><a href="nivel-1.html">Nivel 1 </a></li>
+                <li><a href="nivel-2.html"> Nivel 2 </a></li>
+            </ul>
+        </li>
+        <li> <a href="#">Mapa</a></li>
+    </ul>
+    <div class="juego">
+        <div class="cabecera-juego">
+            <div class="titulo-juego"> Compost Master</div>
+            <div class="nivel-juego"> Nivel 1</div>
+        </div>
+        <div class="instrucciones">
+            <div class="titulo-instrucciones">¿Cómo jugar? </div>
+            <div class="texto-instrucciones">Arrastra los desechos que creas que pueden ir a la compostera. El resto
+                desechos los puedes dejar fuera
+            </div>
+        </div>
+        <div class="juego-accion">
+            <div id="outer-dropzone" class="dropzone">
+                <img class="compostera" src="assets/img/ilustraciones/ilustracion-compostera.jpg">
+            </div>
+            <span class="yes-drop drag-drop cascara-huevo"> <img class="drag-img" src="assets/img/ilustraciones/cascara-huevo.jpg">
+                <p class="texto-drop">Cáscara de huevo</p>
+            </span>
+            <span class="yes-drop drag-drop citricos"> <img class="drag-img"
+                    src="assets/img/ilustraciones/citricos.jpg"> 
+                    <p class="texto-drop">Limón</p></span>
+                  
+            <span class="yes-drop drag-drop pan"> <img
+                    class="drag-img" src="assets/img/ilustraciones/pan.jpg">
+                    <p class="texto-drop">Pan</p>
+            </span>
+            <span class="yes-drop drag-drop manzana"> <img
+                    class="drag-img" src="assets/img/ilustraciones/fruta.jpg">
+                    <p class="texto-drop"> Manzana</p> </span>
+                   
+            <div class="area-btn-compostar"><a id="btn-compostar">Compostar</a>
+            </div>
+        </div>
+        
+    </div>
+    <div class="contenedor-ventana-modal">
+        <div class="ventana-modal">
+            <div class="cabecera-juego">
+                <div class="titulo-juego"> Compost Master</div>
+                <div class="nivel-juego"> Nivel 1</div>
+            </div>
+            <div class="puntuacion"></div>
+            <div class="feedback">
+                <div class="resultados-positivos">
+                    <h2 class="titulo-aciertos"> Aciertos</h2>
+                    <div class="resultados-positivos-lista"></div>
+                </div>
+                <div class="resultados-negativos">
+                    <h2 class="titulo-fallos"> Fallos </h2>
+                    <div class="resultados-negativos-lista"></div>
+                </div>
+            </div>
+            <div class="btn-siguiente"></div>
+        </div>
+    </div>
+    <footer class="contenedor-footer">
+        <div class="titulo juego">
+            COMPOST MASTER 2021
+        </div>
+        <div class="autora-juego">
+            Clara Salgado 
+        </div>
+    </footer>
+</body>
+
+</html>

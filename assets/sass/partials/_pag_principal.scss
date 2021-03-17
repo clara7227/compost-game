@@ -1,0 +1,126 @@
+/*CABECERA*/
+.contenedor-pres {
+  border-bottom: $color-negro 1px solid;
+  padding: 0 0 1em 0;
+  .contenedor-img-texto {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    @include margen-der-izq();
+    margin-bottom: 0;
+    .img-pres {
+      height: 120px;
+      width: 120px;
+      border-radius: 100px;
+      border: 2px solid $color-negro;
+      object-fit: cover;
+    }
+    .texto-pres {
+      font-size: 1.1em;
+      margin: 0 -0.5em 0 1em;
+      line-height: 1.5em;
+    }
+  }
+}
+.titulo-pres-juego {
+  font-size: 3.5em;
+  font-weight: 300;
+  line-height: 1em;
+  @include margen-der-izq();
+}
+.contenedor-articulos {
+  margin: 1em 1.6em 1em 1.6em;
+}
+/*ARTICULOS*/
+.articulo-juego {
+  .tit-art {
+    font-size: 1em;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+  .texto-art {
+    font-size: 0.85em;
+    line-height: 1.5em;
+  }
+  .btn-art {
+    display: inline-block;
+    .btn-jugar {
+      @include boton();
+      margin: 1.3em 0 1.5em 0;
+      &:hover {
+        background-color: $color-verde;
+      }
+    }
+  }
+  .seguir-leyendo {
+    display: inline-block;
+    align-self: right;
+    .btn-jugar {
+      @include boton();
+      margin: 1.3em 0 1.5em 0;
+      &:hover {
+        background-color: $color-verde;
+        color: white;
+      }
+    }
+  }
+}
+/*DESKTOP*/
+@media (min-width: 1000px) {
+  /*PRES*/
+  .contenedor-pres {
+    padding: 0 25% 2em 20%;
+    border-bottom: transparent 1px solid;
+    position: relative;
+  }
+  .contenedor-pres:after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 45%;
+    width: 7%;
+    border-bottom: 1px solid $color-gris;
+  }
+  
+  .contenedor-pres {
+    .contenedor-img-texto {
+      display: flex;
+      .img-pres {
+        height: 230px;
+        width: 230px;
+        position: absolute;
+        top: 10px;
+        border-radius: 240px;
+        border: 2px solid $color-negro;
+        object-fit: cover;
+        z-index: 0;
+      }
+      .texto-pres {
+        font-size: 1.2em;
+        margin: 0 0 0 260px;
+        line-height: 1.5em;
+      }
+    }
+  }
+  .titulo-pres-juego {
+    font-size: 4.5em;
+    font-weight: 300;
+    line-height: 1em;
+    margin: 0.3em 0 16px 4em;
+  }
+  /*ARTICULOS*/
+  .contenedor-articulos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    padding: 1em 17em 10em 17em;
+
+  }
+  /*FOOTER*/
+  footer {
+    .contenedor-footer-pres {
+      position: absolute;
+      bottom: 0;
+      padding-right: 10em;
+    }
+  }
+}

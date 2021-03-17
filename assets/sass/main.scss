@@ -1,0 +1,65 @@
+@import "lib/vars";
+@import "lib/mixins";
+@import "lib/reboot";
+@import "lib/fontawesome/font-awesome";
+@import "lib/fontface";
+@import "lib/keyframes";
+@import "partials/drag_and_drop";
+@import "partials/juego";
+@import "partials/pag_principal";
+@import "partials/menu";
+
+/*COLORES*/
+$color-negro: rgb(26, 26, 26);
+$color-gris: rgb(55, 55, 55);
+$color-verde-oscuro: rgb(32, 79, 43);
+
+body {
+  font-family: "Poppins";
+  font-weight: 400;
+  height: 640px;
+}
+a {
+  color: $color-negro;
+  transition: 300ms ease-in;
+  &:hover {
+    color: white;
+  }
+}
+/*PORTADA*/
+
+/*FOOTER*/
+footer {
+  background-color: $color-negro;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  font-size: 0.8em;
+  padding: 0.5em 1.6em 0.5em 0;
+  z-index: 0;
+  bottom: 0;
+  .titulo-juego {
+    font-weight: 400;
+  }
+  .autora-juego {
+    font-weight: 300;
+  }
+}
+.contenedor-footer-pres {
+  background-color: $color-negro;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  font-size: 0.8em;
+  padding: 0.5em 1.6em 0.5em 0;
+  z-index: 0;
+}
+@media (min-width:1000px){
+  .contenedor-footer-pres {
+    position: absolute;
+  }
+}
