@@ -15,9 +15,9 @@ $color-gris: rgb(55, 55, 55);
 $color-verde-oscuro: rgb(32, 79, 43);
 
 body {
-  font-family: "Poppins";
+  font-family: $font_family_base;
   font-weight: 400;
-  height: 640px;
+  /*height: 40px;*/
 }
 a {
   color: $color-negro;
