@@ -151,19 +151,16 @@ window.onload = function () {
         resultadosPositivos.unshift({
           clase: "cascara-huevo",
           imagen: src = "assets/img/ilustraciones/a-huevo.jpg",
-          titulo: `Cáscaras aprovechadas`,
-          mensaje: `¡Genial! Las cáscaras de huevo han aportado calcio al compost, que es importante para el crecimiento
-              de muchas plantas.` }
+          titulo: `Eggshells`,
+          mensaje: `Great! Egg shells bring calcium into the compost, which is important for the growth of a lot of plants.` }
         )
         puntuacion = puntuacion + 25
       } else {
         resultadosNegativos.unshift({
           clase: "cascara-huevo",
           imagen: src = "assets/img/ilustraciones/f-huevo.jpg",
-          titulo: `Cáscaras desaprovechadas`,
-          mensaje: `Las cáscaras de huevo
-              habrían aportado calcio al compost, que es importante para el crecimiento
-              de muchas plantas.`
+          titulo: `Eggshells waste`,
+          mensaje: `Egg shells could have brought calcium into the compost, which is important for the growth of a lot of plants.`
         }) 
       }
     //CITRICOS
@@ -174,12 +171,9 @@ window.onload = function () {
       resultadosNegativos.unshift({
         clase: "citricos",
         imagen: src="assets/img/ilustraciones/f-acido.jpg",
-        titulo: `Acidificación en la compostera`,
-        mensaje: `Los cítricos como naranjas o limones
-        acidifican la tierra y dificultan la vida de microorganismos
-        dedicados a descomponer la tierra. El proceso de compostaje podría
-        ralentizarse o pararse por completo.
-        .`
+        titulo: `Compost acidification`,
+        mensaje: `Citrus such as oranges or lemons acidify the soil. Lots of microorganisms, which are crucial for the decomposition process, aren't able to thrive under an acid soil. The decomposition process could slow down or stop.
+        `
       })
     } else {
       /*resultadosPositivos.unshift({
@@ -199,11 +193,8 @@ window.onload = function () {
       resultadosNegativos.unshift({
         clase: "pan",
         imagen: src="assets/img/ilustraciones/f-plaga.jpg",
-        titulo: `Plagas al acecho`,
-        mensaje: `Este pan trajo plagas que serán 
-        difíciles de erradicar. Otros alimentos procesados como el arroz, la
-        pasta tendrán el mismo efecto sobre la compostera. Estos alimentos
-        se pueden echar al cubo de residuos orgánicos (marrón).`
+        titulo: `Lurking plagues`,
+        mensaje: `The bread brought plagues that will be difficult to exterminate. Other processed food like rice or pasta will have a similar effect on the compost.`
       })
     } else {
      /* console.log("mol bien")
@@ -224,10 +215,9 @@ window.onload = function () {
       resultadosPositivos.unshift({
         clase: "manzana",
         imagen: src="assets/img/ilustraciones/a-fruta.jpg",
-        titulo: `Fruta aprovechada`,
+        titulo: `Fruit waste`,
         mensaje: `
-        ¡Bien hecho! La fruta se puede compostar, evitando echar las semillas,
-        que pueden germinar y robar energía del proceso de compostaje. `
+        Well done! You threw the remains of fruit into the composting bin. They have nutrients and bring humidity into the composting bin `
       })
       puntuacion = puntuacion + 25
       console.log(puntuacion)
@@ -237,8 +227,7 @@ window.onload = function () {
         imagen: src="assets/img/ilustraciones/f-fruta.jpg",
         titulo: `Fruta desaprovechada`,
         mensaje: `
-        ¡Una pena! Has desaprovechado los restos de fruta, que son compostables
-        y aportan nurtientes y humedad.
+        What a shame! You didn't throw the remains of fruit into the composting bin. They have nutrients and bring humidity into the composting bin.
          `
       })
     }
@@ -246,7 +235,7 @@ window.onload = function () {
     //RENDER RESULTADOFINAL
     let renderVentanaResultados = () => {
       let puntuacionDOM = `<div class="numero-puntuacion"> ${puntuacion}% </div> 
-                          <div class="puntuacion-acierto"> de acierto </div>`;
+                          <div class="puntuacion-acierto"> success rate </div>`;
       document.querySelector(".puntuacion").innerHTML = puntuacionDOM
       let resultadosPositivosDOM = "";
       resultadosPositivos.forEach(resultadoPositivo => {
@@ -286,11 +275,11 @@ window.onload = function () {
     let siguientePaso = () => {
       let btnSiguiente = document.querySelector('.btn-siguiente');
       if (puntuacion == 100) {
-        btnSiguiente.innerHTML = `<a class="siguiente-nivel" href="index.html"> Volver a inicio </a> <a class="salir" href="index.html"> 
-        Salir del juego</a>`
+        btnSiguiente.innerHTML = `<a class="siguiente-nivel" href="nivel-2.html"> Next level </a> <a class="salir" href="index.html"> 
+        Home</a>`
         console.log('aquiii')
       } else {
-        btnSiguiente.innerHTML = '<a class="mismo-nivel" href="nivel-2.html"> Inténtalo otra vez </a> <a class="salir" href="index.html"> Salir del juego </a>'
+        btnSiguiente.innerHTML = '<a class="mismo-nivel" href="nivel-1.html"> Try again </a> <a class="salir" href="index.html"> Home</a>'
       }
     }
     siguientePaso()

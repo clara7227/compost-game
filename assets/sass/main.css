@@ -3571,6 +3571,11 @@ template {
   color: rgb(55, 55, 55);
 }
 
+.juego-accion {
+  position: relative;
+  margin-left: 0px;
+}
+
 /*VALIDAR*/
 .area-btn-compostar {
   display: flex;
@@ -3579,7 +3584,7 @@ template {
 }
 
 #btn-compostar {
-  margin: 1em 0 0 0;
+  margin: 3em 0 0 0;
   display: flex;
   justify-content: right;
   border: rgb(103, 103, 103) 1px solid;
@@ -3701,6 +3706,13 @@ template {
   .juego {
     padding: 0 17em 0 17em;
   }
+  .juego-contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .juego-accion {
+    position: relative;
+  }
   .compostera {
     height: 250px;
   }
@@ -3715,6 +3727,9 @@ template {
     font-size: 0.8em;
     line-height: 1.3em;
     width: 80px;
+  }
+  .dropzone {
+    margin-left: 250px;
   }
   .area-btn-compostar {
     padding: 1em;
@@ -3861,7 +3876,7 @@ template {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
-    padding: 1em 17em 10em 17em;
+    padding: 1em 17em 1em 17em;
   }
   /*FOOTER*/
   footer .contenedor-footer-pres {
@@ -3987,7 +4002,6 @@ footer {
   color: white;
   display: flex;
   justify-content: space-between;
-  position: absolute;
   font-size: 0.8em;
   padding: 0.5em 1.6em 0.5em 0;
   z-index: 0;

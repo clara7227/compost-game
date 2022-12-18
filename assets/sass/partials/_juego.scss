@@ -14,6 +14,7 @@ $color-verde: rgb(0, 137, 32);
 .juego {
   margin: 0 1.6em 0 1.6em;
 }
+
 .cabecera-juego {
   display: block;
   width: 100%;
@@ -33,6 +34,7 @@ $color-verde: rgb(0, 137, 32);
     font-size: 0.9em;
   }
 }
+
 .instrucciones {
   margin: 1.6em 0 1em 0;
   font-weight: 400;
@@ -46,6 +48,10 @@ $color-verde: rgb(0, 137, 32);
     color: $color-gris;
   }
 }
+.juego-accion {
+  position: relative;
+  margin-left:0px;
+}
 /*VALIDAR*/
 .area-btn-compostar {
   display: flex;
@@ -53,7 +59,7 @@ $color-verde: rgb(0, 137, 32);
   margin-top: 1em;
 }
 #btn-compostar {
-  margin: 1em 0 0 0;
+  margin: 3em 0 0 0;
   display: flex;
   justify-content: right;
   border: $color-gris-medio 1px solid;
@@ -173,6 +179,14 @@ $color-verde: rgb(0, 137, 32);
   .juego {
     padding: 0 17em 0 17em;
   }
+  .juego-contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .juego-accion {
+    position: relative;
+   // margin-left:300px;
+  }
   .compostera {
     height: 250px;
   }
@@ -187,6 +201,9 @@ $color-verde: rgb(0, 137, 32);
     font-size: 0.8em;
     line-height: 1.3em;
     width: 80px;
+  }
+  .dropzone {
+    margin-left:250px;
   }
   .area-btn-compostar {
     padding: 1em;

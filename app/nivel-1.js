@@ -151,8 +151,8 @@ window.onload = function () {
       resultadosNegativos.unshift({
         clase: "restos-carne",
         imagen: src="assets/img/ilustraciones/f-ratas.jpg",
-        titulo: `Ratas infiltradas`,
-        mensaje: `Atraídas por el olor a podredumbre de la carne y el pescado, una familia de ratas se ha instalado en la compostera. Hacerlas marchar será una tarea complicada.`
+        titulo: `Undercover rats`,
+        mensaje: `Drawn by the smell of rotten meat and fish, a family of rats has built its home in the composting bin. And they won't leave it without a fight.`
       })
     } else {
       /*resultadosPositivos.unshift({
@@ -172,8 +172,8 @@ window.onload = function () {
       resultadosPositivos.unshift({
         clase: "restos-poda",
         imagen: src="assets/img/ilustraciones/a-poda.jpg",
-        titulo: `Restos vegetales`,
-        mensaje: `Restos de poda como ramas u hojas pueden ir al compost. Recuerda que cuanto más triturados estén, más rápido será el proceso de descomposición.`
+        titulo: `Pruning waste`,
+        mensaje: `The remains of pruning such as leaves and branches can go in the composting bin. After you throw your food waste, it's important to cover it up with this kind of "dry matter" to help the decomposition process.`
       })
       puntuacion = puntuacion + 25
       console.log(puntuacion)
@@ -181,8 +181,8 @@ window.onload = function () {
       resultadosNegativos.unshift({
         clase: "restos-poda",
         imagen: src="assets/img/ilustraciones/f-poda.jpg",
-        titulo: `Poda desaprovechada`,
-        mensaje: `Restos de poda como hojas y ramas pueden ir a la compostera, puedes aprovecharla para generar más compost. `
+        titulo: `Pruning waste`,
+        mensaje: `The remains of pruning such as leaves and branches can go in the composting bin. After you throw your food waste, it's important to cover it up with this kind of "dry matter" to help the decomposition process. `
       })
     
     }
@@ -194,8 +194,8 @@ window.onload = function () {
       resultadosNegativos.unshift({
         clase: "restos-higiene",
         imagen: src="assets/img/ilustraciones/f-pañal.jpg",
-        titulo: `Pañal inmortal`,
-        mensaje: `Después de meses e incluso años, los pañales, compresas y tampones siguen intáctos. Ni en 6 meses, ni en 200 años se habrán descompuesto. Ni siquiera nuetros nietos llegarán a ver cómo se descomponen. Además, dejan un olor bastante desagradable que tampoco se irá rápido.`
+        titulo: `Immortal diaper`,
+        mensaje: `After months and even years, diapers, sanitary towels and tampons remain the same. Probably not even our grandchildren will get to see how they decompose. Plus, they leave an ugly smell that won't go away in a long time either.`
       })
     } else {
       console.log("mol bien")
@@ -216,8 +216,8 @@ window.onload = function () {
       resultadosPositivos.unshift({
         clase: "",
         imagen: src="assets/img/ilustraciones/a-verdura.jpg",
-        titulo: `Verduras frescas`,
-        mensaje: `Los restos de verduras frescas como tallos, hojas o cáscaras pueden ir al compost.  `
+        titulo: `Vegetable waste`,
+        mensaje: `Nice job! The remains of fresh vegetables like stems, leaves or skins can go to the compost.`
       })
       puntuacion = puntuacion + 25
       console.log(puntuacion)
@@ -225,15 +225,15 @@ window.onload = function () {
         resultadosNegativos.unshift({
         clase: "",
         imagen: src="assets/img/ilustraciones/f-verdura.jpg",
-        titulo: `Verduras desaprovechadas`,
-        mensaje: `¡No has aprovechado las verduras! Los restos de verduras frescas como tallos, hojas o cáscaras pueden ir al compost. `
+        titulo: `Vegetable waste`,
+        mensaje: `The remains of fresh vegetables like stems, leaves or skins can go to the compost. `
       })
     }
     
     //RENDER RESULTADOFINAL
     let renderVentanaResultados = () => {
       let puntuacionDOM = `<div class="numero-puntuacion"> ${puntuacion}% </div> 
-                          <div class="puntuacion-acierto"> de acierto </div>`;
+                          <div class="puntuacion-acierto"> success rate </div>`;
       document.querySelector(".puntuacion").innerHTML = puntuacionDOM
       let resultadosPositivosDOM = "";
       resultadosPositivos.forEach(resultadoPositivo => {
@@ -273,11 +273,11 @@ window.onload = function () {
     let siguientePaso = () => {
       let btnSiguiente = document.querySelector('.btn-siguiente');
       if (puntuacion == 100) {
-        btnSiguiente.innerHTML = `<a class="siguiente-nivel" href="nivel-2.html"> Siguiente </a> <a class="salir" href="index.html"> 
-        Salir del juego</a>`
+        btnSiguiente.innerHTML = `<a class="siguiente-nivel" href="nivel-2.html"> Next level </a> <a class="salir" href="index.html"> 
+        Home</a>`
         console.log('aquiii')
       } else {
-        btnSiguiente.innerHTML = '<a class="mismo-nivel" href="nivel-1.html"> Inténtalo otra vez </a> <a class="salir" href="index.html"> Salir del juego </a>'
+        btnSiguiente.innerHTML = '<a class="mismo-nivel" href="nivel-1.html"> Try again </a> <a class="salir" href="index.html"> Home</a>'
       }
     }
     siguientePaso()
